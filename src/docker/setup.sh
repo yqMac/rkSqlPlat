@@ -44,8 +44,8 @@ apt-get install -yq --no-install-recommends gcc libmariadb-dev libldap2-dev libs
 # mysql 软链, 供 sqladvisor 使用
 #ls -l /usr/lib/x86_64-linux-gnu/
 #ls -l /usr/lib/x86_64-linux-gnu/ | grep libmysqlclient
-#ln -s /usr/lib/x86_64-linux-gnu/libmariadb.so.3 /usr/lib/x86_64-linux-gnu/libmysqlclient.so.18
-ln -s /usr/lib/aarch64-linux-gnu/libmariadb.so.3 /usr/lib/aarch64-linux-gnu/libmysqlclient.so.18
+ln -s /usr/lib/x86_64-linux-gnu/libmariadb.so.3 /usr/lib/x86_64-linux-gnu/libmysqlclient.so.18
+#ln -s /usr/lib/aarch64-linux-gnu/libmariadb.so.3 /usr/lib/aarch64-linux-gnu/libmysqlclient.so.18
 apt-get clean
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 echo $TZ > /etc/timezone
