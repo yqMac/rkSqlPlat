@@ -8,6 +8,7 @@ WORKDIR /opt/
 
 RUN useradd nginx
 #archery
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN apt-get update \
     && apt-get install -yq --no-install-recommends nginx mariadb-client \
     && source venv4archery/bin/activate \
