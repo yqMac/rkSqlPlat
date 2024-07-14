@@ -12,6 +12,7 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN apt-get update \
     && apt-get install -yq --no-install-recommends nginx mariadb-client \
     && source venv4archery/bin/activate \
+    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
     && pip install -r /opt/archery/requirements.txt \
     && pip install "redis>=4.1.0" \
     && cp -f /opt/archery/src/docker/nginx.conf /etc/nginx/ \
